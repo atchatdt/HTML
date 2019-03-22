@@ -1,0 +1,7 @@
+{
+  "todos":[
+    {"id": 1,"content": "sleep"},
+    {"id": 2,"content": "eat"},
+    {"id": 3,"content": "play game"}
+  ]
+}

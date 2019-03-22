@@ -1,3 +1,4 @@
+
 var storageKey='todoList';
 var data = localStorage.getItem(storageKey);
 var todoList;
@@ -10,6 +11,8 @@ else{
 
 var addBtn= document.getElementById('btn');
 //addBtn.onclick=addItem;
+
+
 addBtn.addEventListener('click',addItem);
 function render(){
 	var  htmlList = document.getElementById('todo');
@@ -19,14 +22,15 @@ function render(){
 	htmlList.innerHTML = content.join('');
 }
 
+
 function addItem(){
-	var item =document.getElementById('item');
-	var newItem=item.value;
+	var input =document.getElementById('item');
+	var newItem=input.value;
 	if(newItem)
 	{
 		todoList.push(newItem);
 		render();
-		item.value='';
+		input.value='';
 		localStorage.setItem(storageKey,JSON.stringify(todoList));
 	}
 }
